@@ -1,9 +1,27 @@
 const mongoose = require('mongoose');
 
-const UserSchema = new mongoose.Schema({
-    username: { type: String, required: true, unique: true },
-    roastInfo: { type: String, required: true },
-    createdAt: { type: Date, default: Date.now },
-});
+const userSchema = new mongoose.Schema({
+    email: {
+        type: String,
+        required: true,
+        unique: true,
+    },
+    password: {
+        type: String,
+        required: true,
+    },
+    profile: {
+        fullName: { type: String, required: true },
+        age: { type: Number, required: true },
+        profilePicture: { type: String, default: '' },
+        occupation: { type: String, default: '' },
+        school: { type: String, default: '' },
+        relationshipStatus: { type: String, default: '' },
+        roastPreference: { type: String, default: 'Medium' },
+        roastAbout: { type: String, default: '' },
+    },
+}, { timestamps: true });
 
-module.exports = mongoose.model('User', UserSchema);
+const User = mongoose.model('User', userSchema);
+
+module.exports = User;
