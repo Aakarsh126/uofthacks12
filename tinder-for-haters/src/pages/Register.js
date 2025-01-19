@@ -42,7 +42,7 @@ const Register = () => {
                 roastPreference, 
                 roastAbout 
             };
-            const response = await axios.post('http://localhost:3738/api/users/register', { email, password, profile });
+            const response = await axios.post('http://100.65.15.242:3738/api/users/register', { email, password, profile });
             alert('Registration Successful!');
             navigate('/');
         } catch (error) {

@@ -4,21 +4,19 @@ import CardStack from '../components/cardstack'; // Import the CardStack compone
 const App = () => {
   const profiles = [
     {
-      name: 'John Doe',
-      age: 30,
+      name: 'Arnav Jhajharia',
+      age: 18,
       roastLevel: 'Mild Burn 🔥',
       petPeeves: 'Slow walkers',
-      roastOn: ['My Profile Pic', 'My Weird Hobbies'],
-      roastAlias: 'Burninator Bob',
+      roastOn: ['My Robotics Skill', 'My Weird Hobbies'],
       image: 'images/funny-pic1.png',
     },
     {
-      name: 'Jane Smith',
-      age: 28,
-      roastLevel: 'Sassy Clapback 💅',
+      name: 'Aditya Dutta',
+      age: 19,
+      roastLevel: 'Nuclear Meltdown 💅',
       petPeeves: 'People who text "K"',
-      roastOn: ['My Taste in Music/Movies'],
-      roastAlias: 'The Roastmaster',
+      roastOn: ['My Taste in Music and Movies'],
       image: 'images/funny-pic2.png',
     },
   ];
