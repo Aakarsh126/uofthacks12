@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './login.css'; // Importing CSS
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -20,25 +21,30 @@ const Login = () => {
     };
 
     return (
-        <div>
-            <h1>Login</h1>
-            <form onSubmit={handleLogin}>
-                <input
-                    type="email"
-                    placeholder="Email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                />
-                <input
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-                <button type="submit">Login</button>
-            </form>
+        <div className="login-container">
+            <div className="login-box">
+                <h1 className="login-title">Welcome to RoastMe!</h1>
+                <form onSubmit={handleLogin} className="login-form">
+                    <input
+                        className="login-input"
+                        type="email"
+                        placeholder="Enter your email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
+                    <input
+                        className="login-input"
+                        type="password"
+                        placeholder="Enter your password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
+                    <button type="submit" className="login-button">Login</button>
+                </form>
+                <p className="signup-link">New here? <a href="/register">Sign up now!</a></p>
+            </div>
         </div>
     );
 };

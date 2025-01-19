@@ -1,0 +1,70 @@
+/* Overall container style */
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e0f7fa; /* Light pastel blue background */
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Dark text color */
+}
+
+/* Login box styling */
+.login-box {
+    background: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+    border-radius: 10px;
+    padding: 40px 30px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+.login-title {
+    font-size: 2em;
+    color: #00796b; /* Pastel teal color for title */
+    margin-bottom: 20px;
+}
+
+/* Styling for the input fields */
+.login-input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #b2dfdb; /* Light pastel teal border */
+    font-size: 1em;
+}
+
+/* Button styling */
+.login-button {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #80deea; /* Pastel cyan background */
+    color: #fff; /* White text */
+    border: none;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect on the button */
+.login-button:hover {
+    background-color: #4dd0e1; /* Slightly darker pastel cyan on hover */
+}
+
+/* Link styling */
+.signup-link {
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.signup-link a {
+    color: #00796b; /* Pastel teal link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.signup-link a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
