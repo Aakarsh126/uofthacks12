@@ -38,12 +38,12 @@ const CardStack = ({ profiles }) => {
 
   const handleSwipe = (direction, profile) => {
     // Remove the top card
-    
+
     setSwipeFeedback(`${profile.name} was ${direction === "like" ? "liked" : "disliked"}.`);
-    setCardStack((prevStack) => prevStack.slice(1));
+    // setCardStack((prevStack) => prevStack.slice(1));
     // Update swipe feedback
     // Clear the feedback after a short delay
-    setTimeout(() => setSwipeFeedback(""), 2000);
+    setTimeout(() => { setSwipeFeedback(""); setCardStack((prevStack) => prevStack.slice(0)); }, 2000);
   };
 
   return (
@@ -62,3 +62,4 @@ const CardStack = ({ profiles }) => {
 };
 
 export default CardStack;
+
