@@ -1,0 +1,78 @@
+/* Overall container style */
+.register-container {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items to the top */
+    align-items: center;
+    background: #e0f7fa; /* Light pastel blue background */
+    font-family: 'Arial', sans-serif; /* Consistent font */
+    color: #333; /* Dark text color */
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+/* Title styling */
+.register-title {
+    font-size: 2em;
+    color: #00796b; /* Pastel teal color for title */
+    margin: 20px 0; /* Margin for spacing */
+    width: 100%; /* Full width */
+    text-align: center; /* Center the title */
+}
+
+/* Form styling */
+.register-form {
+    width: 400px; /* Set a fixed width for the form */
+    background: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+    border-radius: 10px;
+    padding: 30px; /* Increased padding for more space */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Space below the form */
+}
+
+/* Input and textarea styling */
+.register-input,
+.register-textarea,
+.register-select,
+.register-file-input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #b2dfdb; /* Light pastel teal border */
+    font-size: 0.8em; /* Reduced font size for placeholders */
+    color: #888; /* Optional: Change placeholder color for better visibility */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Placeholder styling */
+.register-input::placeholder,
+.register-textarea::placeholder {
+    font-size: 0.9em; /* Reduced font size for placeholders */
+    color: #888; /* Optional: Change placeholder color for better visibility */
+}
+
+/* Button styling */
+.register-button {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #80deea; /* Pastel cyan background */
+    color: #fff; /* White text */
+    border: none;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect on the button */
+.register-button:hover {
+    background-color: #4dd0e1; /* Slightly darker pastel cyan on hover */
+}
+
+/* Profile picture preview styling */
+.profile-preview {
+    margin-top: 10px;
+    width: 100px; /* Set a fixed width for the preview */
+    border-radius: 5px;
+}

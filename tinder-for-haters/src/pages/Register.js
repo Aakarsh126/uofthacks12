@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './register.css'; // Importing CSS
 
 const Register = () => {
     const [email, setEmail] = useState('');
@@ -50,80 +51,90 @@ const Register = () => {
     };
 
     return (
-        <div>
-            <h1>Register</h1>
-            <form onSubmit={handleRegister}>
+        <div className="register-container">
+            <h1 className="register-title">Register</h1>
+            <form onSubmit={handleRegister} className="register-form">
                 <input
+                    className="register-input"
                     type="email"
-                    placeholder="Email"
+                    placeholder="Your email (we promise not to spam!)"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
                 />
                 <input
+                    className="register-input"
                     type="password"
-                    placeholder="Password"
+                    placeholder="Password (make it stronger than your excuses!)"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
                 />
                 <input
+                    className="register-input"
                     type="text"
-                    placeholder="Full Name"
+                    placeholder="Full Name (or your alter ego)"
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
                     required
                 />
                 <input
+                    className="register-input"
                     type="number"
-                    placeholder="Age"
+                    placeholder="Age (or how many times you've been told you look like a baby)"
                     value={age}
                     onChange={(e) => setAge(e.target.value)}
                     required
                 />
                 <input
+                    className="register-input"
                     type="text"
-                    placeholder="Occupation"
+                    placeholder="Occupation (what do you do when you're not busy being a legend?)"
                     value={occupation}
                     onChange={(e) => setOccupation(e.target.value)}
                 />
                 <input
+                    className="register-input"
                     type="text"
-                    placeholder="School"
+                    placeholder="School (where you learned to be fabulous... or just learned to nap)"
                     value={school}
                     onChange={(e) => setSchool(e.target.value)}
                 />
                 <select
+                    className="register-select"
                     value={relationshipStatus}
                     onChange={(e) => setRelationshipStatus(e.target.value)}
                 >
                     <option value="">Select Relationship Status</option>
-                    <option value="Single">Single</option>
-                    <option value="In a Relationship">In a Relationship</option>
-                    <option value="It's Complicated">It's Complicated</option>
+                    <option value="Single">Single(In a Relationship with my couch and Netflix))</option>
+                    <option value="In a Relationship">In a Relationship (with pizza)</option>
+                    <option value="It's Complicated">It's Complicated (like your last date)</option>
                 </select>
                 <select
+                    className="register-select"
                     value={roastPreference}
                     onChange={(e) => setRoastPreference(e.target.value)}
                 >
-                    <option value="Light">Light</option>
-                    <option value="Medium">Medium</option>
-                    <option value="Extra Spicy">Extra Spicy</option>
+                    <option value="Light">Mild Burn 🔥</option>
+                    <option value="Medium">Smore level</option>
+                    <option value="Extra Spicy">Nuclear Meltdown ☢️</option>
                 </select>
                 <textarea
-                    placeholder="What should we roast you about?"
+                    className="register-textarea"
+                    placeholder="What should we roast you about?(forgot that you didn't have an opinion"
                     value={roastAbout}
                     onChange={(e) => setRoastAbout(e.target.value)}
                 ></textarea>
                 <input
+                    className="register-file-input"
                     type="file"
                     onChange={handleFileUpload}
                 />
-                {profilePicture && <img src={profilePicture} alt="Profile Preview" width="100" />}
-                <button type="submit">Register</button>
+                {profilePicture && <img src={profilePicture} alt="Profile Preview" className="profile-preview" />}
+                <button type="submit" className="register-button">Register</button>
             </form>
         </div>
     );
 };
 
-export default Register;
+export default Register;    
