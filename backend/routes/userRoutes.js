@@ -45,6 +45,16 @@ router.post('/login', async (req, res) => {
     }
 });
 
+// Fetch all users
+router.get('/', async (req, res) => {
+    try {
+        const users = await User.find(); // Get all users
+        res.json(users); // Return the list of users
+    } catch (err) {
+        res.status(500).json({ message: 'Server error', error: err.message });
+    }
+});
+
 // Fetch a user's profile
 router.get('/:id', async (req, res) => {
     try {
